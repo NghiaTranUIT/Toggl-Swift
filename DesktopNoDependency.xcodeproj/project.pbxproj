@@ -12,6 +12,10 @@
 		BA99992721761ACF007BAA60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA99992621761ACF007BAA60 /* Assets.xcassets */; };
 		BA99992A21761ACF007BAA60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA99992821761ACF007BAA60 /* Main.storyboard */; };
 		BA99993621761ACF007BAA60 /* DesktopNoDependencyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA99993521761ACF007BAA60 /* DesktopNoDependencyTests.swift */; };
+		BA99996521761B1C007BAA60 /* DesktopCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA99996421761B1C007BAA60 /* DesktopCore.framework */; };
+		BA99996621761B1C007BAA60 /* DesktopCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BA99996421761B1C007BAA60 /* DesktopCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BA9999802177631A007BAA60 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA99997F2177631A007BAA60 /* Navigator.swift */; };
+		BA9999822177636F007BAA60 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9999812177636F007BAA60 /* Application.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,6 +28,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		BA99996721761B1C007BAA60 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BA99996621761B1C007BAA60 /* DesktopCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		BA99991F21761ACE007BAA60 /* DesktopNoDependency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesktopNoDependency.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA99992221761ACE007BAA60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -35,6 +53,9 @@
 		BA99993121761ACF007BAA60 /* DesktopNoDependencyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesktopNoDependencyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA99993521761ACF007BAA60 /* DesktopNoDependencyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesktopNoDependencyTests.swift; sourceTree = "<group>"; };
 		BA99993721761ACF007BAA60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA99996421761B1C007BAA60 /* DesktopCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DesktopCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA99997F2177631A007BAA60 /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
+		BA9999812177636F007BAA60 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA99996521761B1C007BAA60 /* DesktopCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +80,7 @@
 		BA99991621761ACE007BAA60 = {
 			isa = PBXGroup;
 			children = (
+				BA99996421761B1C007BAA60 /* DesktopCore.framework */,
 				BA99992121761ACE007BAA60 /* DesktopNoDependency */,
 				BA99993421761ACF007BAA60 /* DesktopNoDependencyTests */,
 				BA99992021761ACE007BAA60 /* Products */,
@@ -76,6 +99,7 @@
 		BA99992121761ACE007BAA60 /* DesktopNoDependency */ = {
 			isa = PBXGroup;
 			children = (
+				BA99997E2177630D007BAA60 /* Source */,
 				BA99992221761ACE007BAA60 /* AppDelegate.swift */,
 				BA99992421761ACE007BAA60 /* ViewController.swift */,
 				BA99992621761ACF007BAA60 /* Assets.xcassets */,
@@ -95,6 +119,15 @@
 			path = DesktopNoDependencyTests;
 			sourceTree = "<group>";
 		};
+		BA99997E2177630D007BAA60 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				BA99997F2177631A007BAA60 /* Navigator.swift */,
+				BA9999812177636F007BAA60 /* Application.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -105,6 +138,7 @@
 				BA99991B21761ACE007BAA60 /* Sources */,
 				BA99991C21761ACE007BAA60 /* Frameworks */,
 				BA99991D21761ACE007BAA60 /* Resources */,
+				BA99996721761B1C007BAA60 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -145,6 +179,11 @@
 				TargetAttributes = {
 					BA99991E21761ACE007BAA60 = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 					BA99993021761ACF007BAA60 = {
 						CreatedOnToolsVersion = 10.0;
@@ -195,8 +234,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA9999822177636F007BAA60 /* Application.swift in Sources */,
 				BA99992521761ACE007BAA60 /* ViewController.swift in Sources */,
 				BA99992321761ACE007BAA60 /* AppDelegate.swift in Sources */,
+				BA9999802177631A007BAA60 /* Navigator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,57 @@
+{
+    "since":1361780172,
+    "data": {
+        "id":123,
+        "api_token":"1971800d4d82861d8f2c1651fea4d212",
+        "default_wid":777,
+        "email":"john.doe@gmail.com",
+        "fullname":"John Doe",
+        "jquery_timeofday_format":"h:i A",
+        "jquery_date_format":"m/d/Y",
+        "timeofday_format":"h:mm A",
+        "date_format":"MM/DD/YYYY",
+        "store_start_and_stop_time":true,
+        "beginning_of_week":1,
+        "language":"en_US",
+        "duration_format": "improved",
+        "image_url":"https://www.toggl.com/images/profile.png",
+        "at": "2015-02-17T16:58:53+00:00",
+        "created_at": "2014-07-31T07:51:17+00:00",
+        "timezone": "Europe/London",
+        "retention": 9,
+        "new_blog_post":{},
+        "projects": [
+            {
+                "id":90123,
+                "wid":777,
+                "name":"Our best project",
+                "billable":true,
+                "active":true,
+                "at":"2013-02-12T09:47:57+00:00",
+                "color":"5"
+            }
+        ],
+        "tags": [
+            {
+                "id":238526,
+                "wid":777,
+                "name":"billed"
+            }
+        ],
+        "tasks": [],
+        "workspaces": [
+            {
+                "id":777,
+                "name":"John's WS",
+                "at":"2012-11-28T11:56:49+00:00",
+                "default_hourly_rate": 0,
+                "default_currency": "USD",
+                "projects_billable_by_default": true,
+                "rounding": 1,
+                "rounding_minutes": 0,
+                "api_token": "ea897..."
+            }
+        ],
+        "clients": []
+    }
+}

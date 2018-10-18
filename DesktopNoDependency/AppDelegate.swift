@@ -11,10 +11,15 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
+    static var shared: AppDelegate {
+        return NSApp.delegate as! AppDelegate
+    }
 
+    // MARK: - Variable
+    lazy var app: Application = Application.default()
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
+        app.start()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

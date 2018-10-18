@@ -7,13 +7,18 @@
 //
 
 import Cocoa
+import DesktopCore
 
 class ViewController: NSViewController {
+
+    private lazy var viewModel: LoginViewModelType = {
+        return LoginViewModel(network: AppDelegate.shared.app.network)
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        viewModel.login(email: "vinhnghiatran@gmail.com", password: "fitpIh-bivzuh-2qaxfu")
     }
 
     override var representedObject: Any? {
