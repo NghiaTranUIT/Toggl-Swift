@@ -30,10 +30,19 @@ enum HTTPMethod: String {
     }
 }
 
+protocol RouteType {
+
+    var baseURL: String { get }
+    var path: String { get}
+}
+
 public enum APIRoute {
 
     case login(LoginParameter)
     case project
+}
+
+extension APIRoute: RouteType {
 
     var baseURL: String {
         return "https://www.toggl.com/api/v8"

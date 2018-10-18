@@ -31,11 +31,13 @@ public final class NetworkService: NetworkServiceType {
     // MARK: - Variable
     private let fetcher: Fetchable
     private let serializer: Serializable
+    private let plugins: [PluginType]
 
     // MARK: - Init
-    public init(fetcher: Fetchable, serializer: Serializable) {
+    public init(fetcher: Fetchable, serializer: Serializable, plugins: [PluginType] = []) {
         self.fetcher = fetcher
         self.serializer = serializer
+        self.plugins = plugins
     }
 
     // MARK: - Public
@@ -51,6 +53,9 @@ public final class NetworkService: NetworkServiceType {
             return
         }
 
+        // Plugins
+        plugins.forEach { $0.process(urlRequest) }
+        
         // Fetch
         fetcher.request(urlRequest) {[weak self] (data, response, error) in
             guard let strongSelf = self else { return }
