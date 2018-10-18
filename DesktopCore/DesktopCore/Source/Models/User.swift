@@ -17,11 +17,14 @@ public struct User: JSONDecodable {
 
     public let email: String
     public let fullName: String
+    public let workspaces: [Workspace]
 
     public static func decode(_ json: [String : Any]) -> User? {
         guard let email = json[Constants.Email] as? String,
             let fullname = json[Constants.Fullname] as? String else { return nil }
-        return User(email: email, fullName: fullname)
+        let workspacesJSON = json["workspaces"] as? [[String: Any]] ?? []
+        let workspaces = workspacesJSON.compactMap { Workspace.decode($0) }
+        return User(email: email, fullName: fullname, workspaces: workspaces)
     }
 }
 

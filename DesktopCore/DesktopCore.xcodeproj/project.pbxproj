@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA320A9E21784940001503F8 /* Workspace.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA320A9D21784940001503F8 /* Workspace.swift */; };
 		BA99995421761B09007BAA60 /* DesktopCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA99994A21761B09007BAA60 /* DesktopCore.framework */; };
 		BA99995921761B09007BAA60 /* DesktopCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA99995821761B09007BAA60 /* DesktopCoreTests.swift */; };
 		BA99995B21761B0A007BAA60 /* DesktopCore.h in Headers */ = {isa = PBXBuildFile; fileRef = BA99994D21761B09007BAA60 /* DesktopCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BA320A9D21784940001503F8 /* Workspace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workspace.swift; sourceTree = "<group>"; };
 		BA99994A21761B09007BAA60 /* DesktopCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DesktopCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA99994D21761B09007BAA60 /* DesktopCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DesktopCore.h; sourceTree = "<group>"; };
 		BA99994E21761B09007BAA60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 			children = (
 				BA99997721775E5F007BAA60 /* APIResponse.swift */,
 				BA99996A21775585007BAA60 /* User.swift */,
+				BA320A9D21784940001503F8 /* Workspace.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				BA999970217755DC007BAA60 /* NetworkService.swift in Sources */,
 				BA99996B21775585007BAA60 /* User.swift in Sources */,
 				BA999974217759CF007BAA60 /* Fetcher.swift in Sources */,
+				BA320A9E21784940001503F8 /* Workspace.swift in Sources */,
 				BA99997221775766007BAA60 /* Parameters.swift in Sources */,
 				BA99997D217761B5007BAA60 /* LoginViewModel.swift in Sources */,
 			);

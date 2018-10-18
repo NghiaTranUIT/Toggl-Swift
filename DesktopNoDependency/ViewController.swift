@@ -9,24 +9,40 @@
 import Cocoa
 import DesktopCore
 
-class ViewController: NSViewController {
+final class ViewController: NSViewController {
 
+    // MARK: - Variable
+    private lazy var adapter: WorkspaceTableViewAdapter = {
+        return WorkspaceTableViewAdapter(tableView: tableView)
+    }()
     private lazy var viewModel: LoginViewModelType = {
         return LoginViewModel(network: AppDelegate.shared.app.network)
     }()
 
+    @IBOutlet weak var tableView: NSTableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        viewModel.login(email: "vinhnghiatran@gmail.com", password: "fitpIh-bivzuh-2qaxfu")
-    }
+        initCommon()
+        viewModel.login(email: "vinhnghiatran@gmail.com", password: "fitpIh-bivzuh-2qaxfu") {[weak self] result in
+            guard let strongSelf = self else { return }
 
-    override var representedObject: Any? {
-        didSet {
-        // Update the view, if already loaded.
+            switch result {
+            case .error(let error):
+                print("Error \(error)")
+            case .success(let user):
+                print("User \(user)")
+
+                // Update
+                strongSelf.adapter.update(user.workspaces)
+            }
         }
     }
 
-
+    private func initCommon() {
+        tableView.dataSource = adapter
+        tableView.delegate = adapter
+    }
 }
 

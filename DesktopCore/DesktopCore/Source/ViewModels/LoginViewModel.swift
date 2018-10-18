@@ -10,7 +10,7 @@ import Foundation
 
 public protocol LoginViewModelType {
 
-    func login(email: String, password: String)
+    func login(email: String, password: String, complete: @escaping (Result<User>) -> Void)
 }
 
 public final class LoginViewModel: LoginViewModelType {
@@ -24,14 +24,11 @@ public final class LoginViewModel: LoginViewModelType {
     }
 
     // MARK: - Public
-    public func login(email: String, password: String) {
+    public func login(email: String, password: String, complete: @escaping (Result<User>) -> Void) {
         let route = APIRoute.login(LoginParameter(email: email, password: password))
         network.request(route, type: User.self) { (result) in
-            switch result {
-            case .error(let error):
-                print("Error \(error)")
-            case .success(let user):
-                print("User \(user)")
+            DispatchQueue.main.async {
+                 complete(result)
             }
         }
     }

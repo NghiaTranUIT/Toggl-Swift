@@ -72,11 +72,9 @@ public final class NetworkService: NetworkServiceType {
 
             // Serialize
             guard let data = data,
-                let jsonObj = try? JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments),
-                let json = jsonObj as? [String: Any],
-                let apiResponse = strongSelf.serializer.serialize(json, type: type) else {
-                    complete(Result.error(NetworkingError.invalidJSON))
-                    return
+            let apiResponse = strongSelf.serializer.serialize(data, type: type) else {
+                complete(Result.error(NetworkingError.invalidJSON))
+                return
             }
 
             // Success

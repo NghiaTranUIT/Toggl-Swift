@@ -10,7 +10,7 @@ import Foundation
 
 public protocol Serializable {
 
-    func serialize<T: JSONDecodable>(_ data: [String: Any], type: T.Type) -> APIResponse<T>?
+    func serialize<T: JSONDecodable>(_ data: Data, type: T.Type) -> APIResponse<T>?
 }
 
 public final class JSONSerializer: Serializable {
@@ -19,7 +19,10 @@ public final class JSONSerializer: Serializable {
 
     }
 
-    public func serialize<T: JSONDecodable>(_ data: [String : Any], type: T.Type) -> APIResponse<T>? {
-        return APIResponse<T>.decode(data)
+    public func serialize<T: JSONDecodable>(_ data: Data, type: T.Type) -> APIResponse<T>? {
+        guard let jsonObj = try? JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments),
+        let json = jsonObj as? [String: Any] else { return nil }
+        print("JSON \(json)")
+        return APIResponse<T>.decode(json)
     }
 }

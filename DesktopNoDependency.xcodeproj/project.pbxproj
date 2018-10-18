@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA320AA021784BE8001503F8 /* WorkspaceTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA320A9F21784BE8001503F8 /* WorkspaceTableViewAdapter.swift */; };
+		BA320AA321784D1E001503F8 /* WorkspaceCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA320AA221784D1E001503F8 /* WorkspaceCellView.swift */; };
+		BA320AA521784D29001503F8 /* WorkspaceCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA320AA421784D29001503F8 /* WorkspaceCellView.xib */; };
 		BA99992321761ACE007BAA60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA99992221761ACE007BAA60 /* AppDelegate.swift */; };
 		BA99992521761ACE007BAA60 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA99992421761ACE007BAA60 /* ViewController.swift */; };
 		BA99992721761ACF007BAA60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA99992621761ACF007BAA60 /* Assets.xcassets */; };
@@ -43,6 +46,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BA320A9F21784BE8001503F8 /* WorkspaceTableViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceTableViewAdapter.swift; sourceTree = "<group>"; };
+		BA320AA221784D1E001503F8 /* WorkspaceCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceCellView.swift; sourceTree = "<group>"; };
+		BA320AA421784D29001503F8 /* WorkspaceCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorkspaceCellView.xib; sourceTree = "<group>"; };
 		BA99991F21761ACE007BAA60 /* DesktopNoDependency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesktopNoDependency.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA99992221761ACE007BAA60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA99992421761ACE007BAA60 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +83,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA320AA121784CF5001503F8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BA320AA221784D1E001503F8 /* WorkspaceCellView.swift */,
+				BA320AA421784D29001503F8 /* WorkspaceCellView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		BA99991621761ACE007BAA60 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +114,7 @@
 		BA99992121761ACE007BAA60 /* DesktopNoDependency */ = {
 			isa = PBXGroup;
 			children = (
+				BA320AA121784CF5001503F8 /* Views */,
 				BA99997E2177630D007BAA60 /* Source */,
 				BA99992221761ACE007BAA60 /* AppDelegate.swift */,
 				BA99992421761ACE007BAA60 /* ViewController.swift */,
@@ -124,6 +140,7 @@
 			children = (
 				BA99997F2177631A007BAA60 /* Navigator.swift */,
 				BA9999812177636F007BAA60 /* Application.swift */,
+				BA320A9F21784BE8001503F8 /* WorkspaceTableViewAdapter.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -217,6 +234,7 @@
 			files = (
 				BA99992721761ACF007BAA60 /* Assets.xcassets in Resources */,
 				BA99992A21761ACF007BAA60 /* Main.storyboard in Resources */,
+				BA320AA521784D29001503F8 /* WorkspaceCellView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,6 +256,8 @@
 				BA99992521761ACE007BAA60 /* ViewController.swift in Sources */,
 				BA99992321761ACE007BAA60 /* AppDelegate.swift in Sources */,
 				BA9999802177631A007BAA60 /* Navigator.swift in Sources */,
+				BA320AA321784D1E001503F8 /* WorkspaceCellView.swift in Sources */,
+				BA320AA021784BE8001503F8 /* WorkspaceTableViewAdapter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
