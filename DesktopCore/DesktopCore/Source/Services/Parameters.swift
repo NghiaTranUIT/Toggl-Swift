@@ -13,8 +13,13 @@ public protocol ParameterConvertible {
     func toParam() -> [String: Any]
 }
 
-public struct LoginParameter {
+public struct LoginEmailParameter {
 
     let email: String
     let password: String
+}
+
+public struct LoginTokenParameter {
+
+    let apiToken: String
 }

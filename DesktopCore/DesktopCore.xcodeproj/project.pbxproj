@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		BA320A9E21784940001503F8 /* Workspace.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA320A9D21784940001503F8 /* Workspace.swift */; };
 		BA320AA721785166001503F8 /* Plugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA320AA621785166001503F8 /* Plugin.swift */; };
+		BA526218217DFD0100A765C7 /* NetworkService+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA526217217DFD0100A765C7 /* NetworkService+Extension.swift */; };
+		BA52621A217E009600A765C7 /* HeaderBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA526219217E009600A765C7 /* HeaderBuilder.swift */; };
 		BA99995421761B09007BAA60 /* DesktopCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA99994A21761B09007BAA60 /* DesktopCore.framework */; };
 		BA99995921761B09007BAA60 /* DesktopCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA99995821761B09007BAA60 /* DesktopCoreTests.swift */; };
 		BA99995B21761B0A007BAA60 /* DesktopCore.h in Headers */ = {isa = PBXBuildFile; fileRef = BA99994D21761B09007BAA60 /* DesktopCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -39,6 +41,8 @@
 /* Begin PBXFileReference section */
 		BA320A9D21784940001503F8 /* Workspace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workspace.swift; sourceTree = "<group>"; };
 		BA320AA621785166001503F8 /* Plugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plugin.swift; sourceTree = "<group>"; };
+		BA526217217DFD0100A765C7 /* NetworkService+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkService+Extension.swift"; sourceTree = "<group>"; };
+		BA526219217E009600A765C7 /* HeaderBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderBuilder.swift; sourceTree = "<group>"; };
 		BA99994A21761B09007BAA60 /* DesktopCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DesktopCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA99994D21761B09007BAA60 /* DesktopCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DesktopCore.h; sourceTree = "<group>"; };
 		BA99994E21761B09007BAA60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -134,6 +138,7 @@
 				BA99997721775E5F007BAA60 /* APIResponse.swift */,
 				BA99996A21775585007BAA60 /* User.swift */,
 				BA320A9D21784940001503F8 /* Workspace.swift */,
+				BA526219217E009600A765C7 /* HeaderBuilder.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -148,6 +153,7 @@
 				BA99997521775C1C007BAA60 /* Serializable.swift */,
 				BA99997921775F1D007BAA60 /* JSONDecodable.swift */,
 				BA320AA621785166001503F8 /* Plugin.swift */,
+				BA526217217DFD0100A765C7 /* NetworkService+Extension.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -270,6 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA526218217DFD0100A765C7 /* NetworkService+Extension.swift in Sources */,
 				BA99997821775E5F007BAA60 /* APIResponse.swift in Sources */,
 				BA320AA721785166001503F8 /* Plugin.swift in Sources */,
 				BA99997621775C1C007BAA60 /* Serializable.swift in Sources */,
@@ -279,6 +286,7 @@
 				BA99996B21775585007BAA60 /* User.swift in Sources */,
 				BA999974217759CF007BAA60 /* Fetcher.swift in Sources */,
 				BA320A9E21784940001503F8 /* Workspace.swift in Sources */,
+				BA52621A217E009600A765C7 /* HeaderBuilder.swift in Sources */,
 				BA99997221775766007BAA60 /* Parameters.swift in Sources */,
 				BA99997D217761B5007BAA60 /* LoginViewModel.swift in Sources */,
 			);

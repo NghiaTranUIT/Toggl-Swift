@@ -38,7 +38,8 @@ protocol RouteType {
 
 public enum APIRoute {
 
-    case login(LoginParameter)
+    case loginEmail(LoginEmailParameter)
+    case loginAPIToken(LoginTokenParameter)
     case project
 }
 
@@ -50,7 +51,8 @@ extension APIRoute: RouteType {
 
     var path: String {
         switch self {
-        case .login:
+        case .loginEmail,
+             .loginAPIToken:
             return "/me"
         case .project:
             return "/project"
@@ -68,11 +70,14 @@ extension APIRoute: RouteType {
     var headers: [Header] {
         var defaultHeaders = [Header(key: "Content-Type", value: "application/json")]
         switch self {
-        case .login(let param):
+        case .loginEmail(let param):
             let combination = "\(param.email):\(param.password)"
-            let encodedString = combination.data(using: String.Encoding.utf8)!.base64EncodedString()
-            let value = "Basic \(encodedString)"
-            defaultHeaders.append(Header(key: "Authorization", value: value))
+            let header = HeaderBuilder.buildAuthorization(with: combination)
+            defaultHeaders.append(header)
+        case .loginAPIToken(let param):
+            let combination = "\(param.apiToken):api_token"
+            let header = HeaderBuilder.buildAuthorization(with: combination)
+            defaultHeaders.append(header)
         default:
             break
         }
