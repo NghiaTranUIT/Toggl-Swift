@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import DesktopCore
+import TogglCore
 
 struct StubFetcher: Fetchable {
 

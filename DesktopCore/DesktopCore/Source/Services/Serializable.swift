@@ -26,3 +26,5 @@ public final class JSONSerializer: Serializable {
         return APIResponse<T>.decode(json)
     }
 }
+
+

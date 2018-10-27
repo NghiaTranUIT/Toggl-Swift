@@ -12,6 +12,7 @@ public protocol LoginViewModelType {
 
     func login(email: String, password: String, complete: @escaping (Result<User>) -> Void)
     func login(apiToken: String, complete: @escaping (Result<User>) -> Void)
+    func loginWithSession(apiToken: String, complete: @escaping (Result<User>) -> Void)
 }
 
 public final class LoginViewModel: LoginViewModelType {
@@ -35,6 +36,14 @@ public final class LoginViewModel: LoginViewModelType {
 
     public func login(apiToken: String, complete: @escaping (Result<User>) -> Void) {
         network.login(apiToken: apiToken) { (result) in
+            DispatchQueue.main.async {
+                complete(result)
+            }
+        }
+    }
+
+    public func loginWithSession(apiToken: String, complete: @escaping (Result<User>) -> Void) {
+        network.loginSession(apiToken: apiToken) { (result) in
             DispatchQueue.main.async {
                 complete(result)
             }

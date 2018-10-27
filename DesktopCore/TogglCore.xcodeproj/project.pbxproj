@@ -11,7 +11,13 @@
 		BA320AA721785166001503F8 /* Plugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA320AA621785166001503F8 /* Plugin.swift */; };
 		BA526218217DFD0100A765C7 /* NetworkService+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA526217217DFD0100A765C7 /* NetworkService+Extension.swift */; };
 		BA52621A217E009600A765C7 /* HeaderBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA526219217E009600A765C7 /* HeaderBuilder.swift */; };
-		BA99995421761B09007BAA60 /* DesktopCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA99994A21761B09007BAA60 /* DesktopCore.framework */; };
+		BA7F77522184922500776B41 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7F77512184922500776B41 /* Header.swift */; };
+		BA7F77552184924700776B41 /* RouteType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7F77542184924700776B41 /* RouteType.swift */; };
+		BA7F77572184925600776B41 /* URLRequestConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7F77562184925600776B41 /* URLRequestConvertible.swift */; };
+		BA7F77592184926D00776B41 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7F77582184926D00776B41 /* HTTPMethod.swift */; };
+		BA7F775B2184929800776B41 /* APIRoute+URLRequestConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7F775A2184929800776B41 /* APIRoute+URLRequestConvertible.swift */; };
+		BA7F775D218492B300776B41 /* APIRoute+RouteType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7F775C218492B300776B41 /* APIRoute+RouteType.swift */; };
+		BA99995421761B09007BAA60 /* TogglCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA99994A21761B09007BAA60 /* TogglCore.framework */; };
 		BA99995921761B09007BAA60 /* DesktopCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA99995821761B09007BAA60 /* DesktopCoreTests.swift */; };
 		BA99995B21761B0A007BAA60 /* DesktopCore.h in Headers */ = {isa = PBXBuildFile; fileRef = BA99994D21761B09007BAA60 /* DesktopCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BA99996B21775585007BAA60 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA99996A21775585007BAA60 /* User.swift */; };
@@ -43,10 +49,16 @@
 		BA320AA621785166001503F8 /* Plugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plugin.swift; sourceTree = "<group>"; };
 		BA526217217DFD0100A765C7 /* NetworkService+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkService+Extension.swift"; sourceTree = "<group>"; };
 		BA526219217E009600A765C7 /* HeaderBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderBuilder.swift; sourceTree = "<group>"; };
-		BA99994A21761B09007BAA60 /* DesktopCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DesktopCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA7F77512184922500776B41 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		BA7F77542184924700776B41 /* RouteType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteType.swift; sourceTree = "<group>"; };
+		BA7F77562184925600776B41 /* URLRequestConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestConvertible.swift; sourceTree = "<group>"; };
+		BA7F77582184926D00776B41 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		BA7F775A2184929800776B41 /* APIRoute+URLRequestConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIRoute+URLRequestConvertible.swift"; sourceTree = "<group>"; };
+		BA7F775C218492B300776B41 /* APIRoute+RouteType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIRoute+RouteType.swift"; sourceTree = "<group>"; };
+		BA99994A21761B09007BAA60 /* TogglCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TogglCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA99994D21761B09007BAA60 /* DesktopCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DesktopCore.h; sourceTree = "<group>"; };
 		BA99994E21761B09007BAA60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BA99995321761B09007BAA60 /* DesktopCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesktopCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA99995321761B09007BAA60 /* TogglCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TogglCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA99995821761B09007BAA60 /* DesktopCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesktopCoreTests.swift; sourceTree = "<group>"; };
 		BA99995A21761B09007BAA60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA99996A21775585007BAA60 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -75,13 +87,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA99995421761B09007BAA60 /* DesktopCore.framework in Frameworks */,
+				BA99995421761B09007BAA60 /* TogglCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA7F77532184923900776B41 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				BA7F77542184924700776B41 /* RouteType.swift */,
+				BA7F77562184925600776B41 /* URLRequestConvertible.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		BA7F776621849BCC00776B41 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				BA9999852177652E007BAA60 /* User.json */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
 		BA99994021761B09007BAA60 = {
 			isa = PBXGroup;
 			children = (
@@ -94,8 +123,8 @@
 		BA99994B21761B09007BAA60 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BA99994A21761B09007BAA60 /* DesktopCore.framework */,
-				BA99995321761B09007BAA60 /* DesktopCoreTests.xctest */,
+				BA99994A21761B09007BAA60 /* TogglCore.framework */,
+				BA99995321761B09007BAA60 /* TogglCoreTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -113,11 +142,11 @@
 		BA99995721761B09007BAA60 /* DesktopCoreTests */ = {
 			isa = PBXGroup;
 			children = (
+				BA7F776621849BCC00776B41 /* JSON */,
+				BA99998321776515007BAA60 /* StubFetcher.swift */,
+				BA999987217765C4007BAA60 /* NetworkServiceTests.swift */,
 				BA99995821761B09007BAA60 /* DesktopCoreTests.swift */,
 				BA99995A21761B09007BAA60 /* Info.plist */,
-				BA99998321776515007BAA60 /* StubFetcher.swift */,
-				BA9999852177652E007BAA60 /* User.json */,
-				BA999987217765C4007BAA60 /* NetworkServiceTests.swift */,
 			);
 			path = DesktopCoreTests;
 			sourceTree = "<group>";
@@ -125,6 +154,7 @@
 		BA99996821775574007BAA60 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				BA7F77532184923900776B41 /* Protocols */,
 				BA99997B217761AA007BAA60 /* ViewModels */,
 				BA99996C217755CB007BAA60 /* Services */,
 				BA9999692177557D007BAA60 /* Models */,
@@ -139,6 +169,8 @@
 				BA99996A21775585007BAA60 /* User.swift */,
 				BA320A9D21784940001503F8 /* Workspace.swift */,
 				BA526219217E009600A765C7 /* HeaderBuilder.swift */,
+				BA7F77512184922500776B41 /* Header.swift */,
+				BA7F77582184926D00776B41 /* HTTPMethod.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -147,6 +179,8 @@
 			isa = PBXGroup;
 			children = (
 				BA99996D217755D4007BAA60 /* APIRoute.swift */,
+				BA7F775A2184929800776B41 /* APIRoute+URLRequestConvertible.swift */,
+				BA7F775C218492B300776B41 /* APIRoute+RouteType.swift */,
 				BA99996F217755DC007BAA60 /* NetworkService.swift */,
 				BA99997121775766007BAA60 /* Parameters.swift */,
 				BA999973217759CF007BAA60 /* Fetcher.swift */,
@@ -180,9 +214,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		BA99994921761B09007BAA60 /* DesktopCore */ = {
+		BA99994921761B09007BAA60 /* TogglCore */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BA99995E21761B0A007BAA60 /* Build configuration list for PBXNativeTarget "DesktopCore" */;
+			buildConfigurationList = BA99995E21761B0A007BAA60 /* Build configuration list for PBXNativeTarget "TogglCore" */;
 			buildPhases = (
 				BA99994521761B09007BAA60 /* Headers */,
 				BA99994621761B09007BAA60 /* Sources */,
@@ -193,14 +227,14 @@
 			);
 			dependencies = (
 			);
-			name = DesktopCore;
+			name = TogglCore;
 			productName = DesktopCore;
-			productReference = BA99994A21761B09007BAA60 /* DesktopCore.framework */;
+			productReference = BA99994A21761B09007BAA60 /* TogglCore.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		BA99995221761B09007BAA60 /* DesktopCoreTests */ = {
+		BA99995221761B09007BAA60 /* TogglCoreTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BA99996121761B0A007BAA60 /* Build configuration list for PBXNativeTarget "DesktopCoreTests" */;
+			buildConfigurationList = BA99996121761B0A007BAA60 /* Build configuration list for PBXNativeTarget "TogglCoreTests" */;
 			buildPhases = (
 				BA99994F21761B09007BAA60 /* Sources */,
 				BA99995021761B09007BAA60 /* Frameworks */,
@@ -211,9 +245,9 @@
 			dependencies = (
 				BA99995621761B09007BAA60 /* PBXTargetDependency */,
 			);
-			name = DesktopCoreTests;
+			name = TogglCoreTests;
 			productName = DesktopCoreTests;
-			productReference = BA99995321761B09007BAA60 /* DesktopCoreTests.xctest */;
+			productReference = BA99995321761B09007BAA60 /* TogglCoreTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -235,7 +269,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BA99994421761B09007BAA60 /* Build configuration list for PBXProject "DesktopCore" */;
+			buildConfigurationList = BA99994421761B09007BAA60 /* Build configuration list for PBXProject "TogglCore" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -247,8 +281,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BA99994921761B09007BAA60 /* DesktopCore */,
-				BA99995221761B09007BAA60 /* DesktopCoreTests */,
+				BA99994921761B09007BAA60 /* TogglCore */,
+				BA99995221761B09007BAA60 /* TogglCoreTests */,
 			);
 		};
 /* End PBXProject section */
@@ -280,15 +314,21 @@
 				BA99997821775E5F007BAA60 /* APIResponse.swift in Sources */,
 				BA320AA721785166001503F8 /* Plugin.swift in Sources */,
 				BA99997621775C1C007BAA60 /* Serializable.swift in Sources */,
+				BA7F775B2184929800776B41 /* APIRoute+URLRequestConvertible.swift in Sources */,
 				BA99996E217755D4007BAA60 /* APIRoute.swift in Sources */,
 				BA99997A21775F1D007BAA60 /* JSONDecodable.swift in Sources */,
 				BA999970217755DC007BAA60 /* NetworkService.swift in Sources */,
+				BA7F775D218492B300776B41 /* APIRoute+RouteType.swift in Sources */,
+				BA7F77552184924700776B41 /* RouteType.swift in Sources */,
 				BA99996B21775585007BAA60 /* User.swift in Sources */,
 				BA999974217759CF007BAA60 /* Fetcher.swift in Sources */,
 				BA320A9E21784940001503F8 /* Workspace.swift in Sources */,
+				BA7F77522184922500776B41 /* Header.swift in Sources */,
+				BA7F77592184926D00776B41 /* HTTPMethod.swift in Sources */,
 				BA52621A217E009600A765C7 /* HeaderBuilder.swift in Sources */,
 				BA99997221775766007BAA60 /* Parameters.swift in Sources */,
 				BA99997D217761B5007BAA60 /* LoginViewModel.swift in Sources */,
+				BA7F77572184925600776B41 /* URLRequestConvertible.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,7 +347,7 @@
 /* Begin PBXTargetDependency section */
 		BA99995621761B09007BAA60 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BA99994921761B09007BAA60 /* DesktopCore */;
+			target = BA99994921761B09007BAA60 /* TogglCore */;
 			targetProxy = BA99995521761B09007BAA60 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -365,7 +405,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -423,7 +463,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -454,6 +494,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nsproxy.DesktopCore;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -482,6 +523,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nsproxy.DesktopCore;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -530,7 +572,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BA99994421761B09007BAA60 /* Build configuration list for PBXProject "DesktopCore" */ = {
+		BA99994421761B09007BAA60 /* Build configuration list for PBXProject "TogglCore" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BA99995C21761B0A007BAA60 /* Debug */,
@@ -539,7 +581,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BA99995E21761B0A007BAA60 /* Build configuration list for PBXNativeTarget "DesktopCore" */ = {
+		BA99995E21761B0A007BAA60 /* Build configuration list for PBXNativeTarget "TogglCore" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BA99995F21761B0A007BAA60 /* Debug */,
@@ -548,7 +590,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BA99996121761B0A007BAA60 /* Build configuration list for PBXNativeTarget "DesktopCoreTests" */ = {
+		BA99996121761B0A007BAA60 /* Build configuration list for PBXNativeTarget "TogglCoreTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BA99996221761B0A007BAA60 /* Debug */,

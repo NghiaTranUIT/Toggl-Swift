@@ -19,4 +19,9 @@ extension NetworkServiceType {
         let route = APIRoute.loginAPIToken(LoginTokenParameter(apiToken: apiToken))
         request(route, type: User.self, complete: complete)
     }
+
+    public func loginSession(apiToken: String, complete: @escaping (Result<User>) -> Void) {
+        let route = APIRoute.loginWithSession(LoginTokenParameter(apiToken: apiToken))
+        request(route, type: User.self, complete: complete)
+    }
 }

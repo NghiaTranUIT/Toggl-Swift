@@ -18,6 +18,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     // MARK: - Variable
     lazy var app: Application = Application.default()
 
+    // MARK: - Public
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         app.start()
     }
@@ -25,7 +26,5 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
-
-
 }
 
