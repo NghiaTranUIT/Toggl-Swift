@@ -1,10 +1,9 @@
 language: objective-c
 osx_image: xcode10
-cache:
-  - bundler
-  - cocoapods
 rvm:
   - 2.2.2
+cache:
+  - bundler
 
 env:
   matrix:
@@ -13,18 +12,14 @@ env:
 
 before_install:
   - bundle install
-  - bundle exec pod repo update
-  - bundle exec pod install
 
 script:
   bundle exec fastlane
 
-    # Run Test
   - if [ $RUN_TESTS == "YES" ]; then
       fastlane mac test
     fi
 
-    # Build app
   - if [ $BUILD_APP == "YES" ]; then
       fastlane mac build
     fi
