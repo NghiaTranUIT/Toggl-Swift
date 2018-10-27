@@ -103,6 +103,14 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		BA7F776621849BCC00776B41 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				BA9999852177652E007BAA60 /* User.json */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
 		BA99994021761B09007BAA60 = {
 			isa = PBXGroup;
 			children = (
@@ -134,11 +142,11 @@
 		BA99995721761B09007BAA60 /* DesktopCoreTests */ = {
 			isa = PBXGroup;
 			children = (
+				BA7F776621849BCC00776B41 /* JSON */,
+				BA99998321776515007BAA60 /* StubFetcher.swift */,
+				BA999987217765C4007BAA60 /* NetworkServiceTests.swift */,
 				BA99995821761B09007BAA60 /* DesktopCoreTests.swift */,
 				BA99995A21761B09007BAA60 /* Info.plist */,
-				BA99998321776515007BAA60 /* StubFetcher.swift */,
-				BA9999852177652E007BAA60 /* User.json */,
-				BA999987217765C4007BAA60 /* NetworkServiceTests.swift */,
 			);
 			path = DesktopCoreTests;
 			sourceTree = "<group>";

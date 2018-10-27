@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import DesktopCore
+@testable import TogglCore
 
 class NetworkServiceTests: XCTestCase {
 
@@ -18,19 +18,59 @@ class NetworkServiceTests: XCTestCase {
     }
 
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+
     }
 
-    func testLoginSuccess() {
+    func testLoginEmailSuccess() {
 
         // Given
         network = NetworkService(fetcher: StubFetcher(), serializer: JSONSerializer())
         let email = "john.doe@gmail.com"
         let password = "123"
-        let givenUser = User(email: "john.doe@gmail.com", fullName: "John Doe")
+        let givenUser = User(email: "john.doe@gmail.com", fullName: "John Doe", workspaces: [])
 
         // When
-        let route = APIRoute.login(LoginParameter(email: email, password: password))
+        let route = APIRoute.loginEmail(LoginEmailParameter(email: email, password: password))
+        network.request(route, type: User.self) { (result) in
+
+            // Then
+            switch result {
+            case .error:
+                XCTFail("The networking service was fail")
+            case .success(let user):
+                XCTAssertEqual(user, givenUser)
+            }
+        }
+    }
+
+    func testLoginAPISuccess() {
+
+        // Given
+        network = NetworkService(fetcher: StubFetcher(), serializer: JSONSerializer())
+        let givenUser = User(email: "john.doe@gmail.com", fullName: "John Doe", workspaces: [])
+
+        // When
+        let route = APIRoute.loginAPIToken(LoginTokenParameter(apiToken: "api"))
+        network.request(route, type: User.self) { (result) in
+
+            // Then
+            switch result {
+            case .error:
+                XCTFail("The networking service was fail")
+            case .success(let user):
+                XCTAssertEqual(user, givenUser)
+            }
+        }
+    }
+
+    func testLoginSessionSuccess() {
+
+        // Given
+        network = NetworkService(fetcher: StubFetcher(), serializer: JSONSerializer())
+        let givenUser = User(email: "john.doe@gmail.com", fullName: "John Doe", workspaces: [])
+
+        // When
+        let route = APIRoute.loginWithSession(LoginTokenParameter(apiToken: "api"))
         network.request(route, type: User.self) { (result) in
 
             // Then
@@ -51,14 +91,14 @@ class NetworkServiceTests: XCTestCase {
         let password = "123"
 
         // When
-        let route = APIRoute.login(LoginParameter(email: email, password: password))
+        let route = APIRoute.loginEmail(LoginEmailParameter(email: email, password: password))
         network.request(route, type: User.self) { (result) in
 
             // Then
             switch result {
-            case .error(let error):
+            case .error:
                XCTAssertTrue(true)
-            case .success(let user):
+            case .success:
                 XCTFail()
             }
         }

@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import DesktopCore
+@testable import TogglCore
 
 class DesktopCoreTests: XCTestCase {
 
@@ -30,5 +30,4 @@ class DesktopCoreTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
-
 }
