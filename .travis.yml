@@ -1,0 +1,17 @@
+language: objective-c
+osx_image: xcode10
+rvm:
+  - 2.2.2
+
+before_install:
+  - bundle install
+
+script:
+  - set -o pipefail
+  - xcodebuild -version
+  - xcodebuild -showsdks
+  - xcodebuild -list
+  - xcodebuild -project "DesktopCore/TogglCore.xcodeproj" -sdk "macosx10.14" -scheme "TogglCore" -destination "arch=x86_64" -configuration Debug ONLY_ACTIVE_ARCH=NO ENABLE_TESTABILITY=YES CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO test | xcpretty;
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)

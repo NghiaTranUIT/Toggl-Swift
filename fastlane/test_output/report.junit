@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <testsuites name='TogglCoreTests.xctest' tests='6' failures='0'>
   <testsuite name='TogglCoreTests.DesktopCoreTests' tests='2' failures='0'>
-    <testcase classname='TogglCoreTests.DesktopCoreTests' name='testExample' time='0.087'/>
-    <testcase classname='TogglCoreTests.DesktopCoreTests' name='testPerformanceExample' time='0.402'/>
+    <testcase classname='TogglCoreTests.DesktopCoreTests' name='testExample' time='0.084'/>
+    <testcase classname='TogglCoreTests.DesktopCoreTests' name='testPerformanceExample' time='0.355'/>
   </testsuite>
   <testsuite name='TogglCoreTests.NetworkServiceTests' tests='4' failures='0'>
-    <testcase classname='TogglCoreTests.NetworkServiceTests' name='testLoginAPISuccess' time='0.023'/>
+    <testcase classname='TogglCoreTests.NetworkServiceTests' name='testLoginAPISuccess' time='0.021'/>
     <testcase classname='TogglCoreTests.NetworkServiceTests' name='testLoginEmailSuccess' time='0.001'/>
     <testcase classname='TogglCoreTests.NetworkServiceTests' name='testLoginErrorBecauseSerializer' time='0.001'/>
     <testcase classname='TogglCoreTests.NetworkServiceTests' name='testLoginSessionSuccess' time='0.001'/>

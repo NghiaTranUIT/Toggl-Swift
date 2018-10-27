@@ -20,6 +20,20 @@
                ReferencedContainer = "container:TogglCore.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "BA99995221761B09007BAA60"
+               BuildableName = "TogglCoreTests.xctest"
+               BlueprintName = "TogglCoreTests"
+               ReferencedContainer = "container:TogglCore.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction

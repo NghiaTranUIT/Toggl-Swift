@@ -23,7 +23,7 @@ platform :mac do
 
   desc "Build TogglCore"
   lane :build do
-    gym(scheme: "TogglCore", workspace: "DesktopWorksapce.xcworkspace")
+    gym(scheme: "TogglCore")
   end
 
   desc "Run Test of TogglCore"
