@@ -8,7 +8,7 @@
 
 import Foundation
 import Cocoa
-import DesktopCore
+import TogglCore
 
 final class WorkspaceTableViewAdapter: NSObject {
 

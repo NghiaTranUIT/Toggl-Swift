@@ -7,7 +7,7 @@
 //
 
 import Cocoa
-import DesktopCore
+import TogglCore
 
 final class ViewController: NSViewController {
 
@@ -25,7 +25,7 @@ final class ViewController: NSViewController {
         super.viewDidLoad()
 
         initCommon()
-        viewModel.login(email: "vinhnghiatran@gmail.com", password: "fitpIh-bivzuh-2qaxfu") {[weak self] result in
+        viewModel.login(apiToken: Constants.APIToken) {[weak self] result in
             guard let strongSelf = self else { return }
 
             switch result {

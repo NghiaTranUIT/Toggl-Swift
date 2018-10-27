@@ -2,9 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:DesktopCore/DesktopCore.xcodeproj">
+      location = "group:/Users/nghiatran/Documents/Work/DesktopNoDependency/DesktopCore/TogglCore.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:DesktopNoDependency.xcodeproj">
+      location = "group:/Users/nghiatran/Documents/Work/DesktopNoDependency/Desktop-Toggl.xcodeproj">
    </FileRef>
 </Workspace>

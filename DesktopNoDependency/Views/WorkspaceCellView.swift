@@ -7,7 +7,7 @@
 //
 
 import Cocoa
-import DesktopCore
+import TogglCore
 
 final class WorkspaceCellView: NSTableCellView {
 

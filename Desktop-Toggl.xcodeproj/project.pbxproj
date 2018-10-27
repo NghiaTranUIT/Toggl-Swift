@@ -10,13 +10,14 @@
 		BA320AA021784BE8001503F8 /* WorkspaceTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA320A9F21784BE8001503F8 /* WorkspaceTableViewAdapter.swift */; };
 		BA320AA321784D1E001503F8 /* WorkspaceCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA320AA221784D1E001503F8 /* WorkspaceCellView.swift */; };
 		BA320AA521784D29001503F8 /* WorkspaceCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA320AA421784D29001503F8 /* WorkspaceCellView.xib */; };
+		BA7F774D218490DC00776B41 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7F774C218490DC00776B41 /* Constants.swift */; };
+		BA7F774F2184916300776B41 /* TogglCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA7F774E2184916300776B41 /* TogglCore.framework */; };
+		BA7F77502184916300776B41 /* TogglCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BA7F774E2184916300776B41 /* TogglCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BA99992321761ACE007BAA60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA99992221761ACE007BAA60 /* AppDelegate.swift */; };
 		BA99992521761ACE007BAA60 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA99992421761ACE007BAA60 /* ViewController.swift */; };
 		BA99992721761ACF007BAA60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA99992621761ACF007BAA60 /* Assets.xcassets */; };
 		BA99992A21761ACF007BAA60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA99992821761ACF007BAA60 /* Main.storyboard */; };
 		BA99993621761ACF007BAA60 /* DesktopNoDependencyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA99993521761ACF007BAA60 /* DesktopNoDependencyTests.swift */; };
-		BA99996521761B1C007BAA60 /* DesktopCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA99996421761B1C007BAA60 /* DesktopCore.framework */; };
-		BA99996621761B1C007BAA60 /* DesktopCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BA99996421761B1C007BAA60 /* DesktopCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BA9999802177631A007BAA60 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA99997F2177631A007BAA60 /* Navigator.swift */; };
 		BA9999822177636F007BAA60 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9999812177636F007BAA60 /* Application.swift */; };
 /* End PBXBuildFile section */
@@ -38,7 +39,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				BA99996621761B1C007BAA60 /* DesktopCore.framework in Embed Frameworks */,
+				BA7F77502184916300776B41 /* TogglCore.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -49,17 +50,18 @@
 		BA320A9F21784BE8001503F8 /* WorkspaceTableViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceTableViewAdapter.swift; sourceTree = "<group>"; };
 		BA320AA221784D1E001503F8 /* WorkspaceCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceCellView.swift; sourceTree = "<group>"; };
 		BA320AA421784D29001503F8 /* WorkspaceCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorkspaceCellView.xib; sourceTree = "<group>"; };
-		BA99991F21761ACE007BAA60 /* DesktopNoDependency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesktopNoDependency.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA7F774C218490DC00776B41 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		BA7F774E2184916300776B41 /* TogglCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TogglCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA99991F21761ACE007BAA60 /* Desktop-Toggl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Desktop-Toggl.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA99992221761ACE007BAA60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA99992421761ACE007BAA60 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BA99992621761ACF007BAA60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA99992921761ACF007BAA60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BA99992B21761ACF007BAA60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA99992C21761ACF007BAA60 /* DesktopNoDependency.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DesktopNoDependency.entitlements; sourceTree = "<group>"; };
-		BA99993121761ACF007BAA60 /* DesktopNoDependencyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesktopNoDependencyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA99993121761ACF007BAA60 /* Desktop-TogglTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Desktop-TogglTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA99993521761ACF007BAA60 /* DesktopNoDependencyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesktopNoDependencyTests.swift; sourceTree = "<group>"; };
 		BA99993721761ACF007BAA60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BA99996421761B1C007BAA60 /* DesktopCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DesktopCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA99997F2177631A007BAA60 /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
 		BA9999812177636F007BAA60 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,7 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA99996521761B1C007BAA60 /* DesktopCore.framework in Frameworks */,
+				BA7F774F2184916300776B41 /* TogglCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,7 +97,7 @@
 		BA99991621761ACE007BAA60 = {
 			isa = PBXGroup;
 			children = (
-				BA99996421761B1C007BAA60 /* DesktopCore.framework */,
+				BA7F774E2184916300776B41 /* TogglCore.framework */,
 				BA99992121761ACE007BAA60 /* DesktopNoDependency */,
 				BA99993421761ACF007BAA60 /* DesktopNoDependencyTests */,
 				BA99992021761ACE007BAA60 /* Products */,
@@ -105,8 +107,8 @@
 		BA99992021761ACE007BAA60 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BA99991F21761ACE007BAA60 /* DesktopNoDependency.app */,
-				BA99993121761ACF007BAA60 /* DesktopNoDependencyTests.xctest */,
+				BA99991F21761ACE007BAA60 /* Desktop-Toggl.app */,
+				BA99993121761ACF007BAA60 /* Desktop-TogglTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -122,6 +124,7 @@
 				BA99992821761ACF007BAA60 /* Main.storyboard */,
 				BA99992B21761ACF007BAA60 /* Info.plist */,
 				BA99992C21761ACF007BAA60 /* DesktopNoDependency.entitlements */,
+				BA7F774C218490DC00776B41 /* Constants.swift */,
 			);
 			path = DesktopNoDependency;
 			sourceTree = "<group>";
@@ -148,9 +151,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BA99991E21761ACE007BAA60 /* DesktopNoDependency */ = {
+		BA99991E21761ACE007BAA60 /* Desktop-Toggl */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BA99993A21761ACF007BAA60 /* Build configuration list for PBXNativeTarget "DesktopNoDependency" */;
+			buildConfigurationList = BA99993A21761ACF007BAA60 /* Build configuration list for PBXNativeTarget "Desktop-Toggl" */;
 			buildPhases = (
 				BA99991B21761ACE007BAA60 /* Sources */,
 				BA99991C21761ACE007BAA60 /* Frameworks */,
@@ -161,14 +164,14 @@
 			);
 			dependencies = (
 			);
-			name = DesktopNoDependency;
+			name = "Desktop-Toggl";
 			productName = DesktopNoDependency;
-			productReference = BA99991F21761ACE007BAA60 /* DesktopNoDependency.app */;
+			productReference = BA99991F21761ACE007BAA60 /* Desktop-Toggl.app */;
 			productType = "com.apple.product-type.application";
 		};
-		BA99993021761ACF007BAA60 /* DesktopNoDependencyTests */ = {
+		BA99993021761ACF007BAA60 /* Desktop-TogglTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BA99993D21761ACF007BAA60 /* Build configuration list for PBXNativeTarget "DesktopNoDependencyTests" */;
+			buildConfigurationList = BA99993D21761ACF007BAA60 /* Build configuration list for PBXNativeTarget "Desktop-TogglTests" */;
 			buildPhases = (
 				BA99992D21761ACF007BAA60 /* Sources */,
 				BA99992E21761ACF007BAA60 /* Frameworks */,
@@ -179,9 +182,9 @@
 			dependencies = (
 				BA99993321761ACF007BAA60 /* PBXTargetDependency */,
 			);
-			name = DesktopNoDependencyTests;
+			name = "Desktop-TogglTests";
 			productName = DesktopNoDependencyTests;
-			productReference = BA99993121761ACF007BAA60 /* DesktopNoDependencyTests.xctest */;
+			productReference = BA99993121761ACF007BAA60 /* Desktop-TogglTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -208,7 +211,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BA99991A21761ACE007BAA60 /* Build configuration list for PBXProject "DesktopNoDependency" */;
+			buildConfigurationList = BA99991A21761ACE007BAA60 /* Build configuration list for PBXProject "Desktop-Toggl" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -221,8 +224,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BA99991E21761ACE007BAA60 /* DesktopNoDependency */,
-				BA99993021761ACF007BAA60 /* DesktopNoDependencyTests */,
+				BA99991E21761ACE007BAA60 /* Desktop-Toggl */,
+				BA99993021761ACF007BAA60 /* Desktop-TogglTests */,
 			);
 		};
 /* End PBXProject section */
@@ -256,6 +259,7 @@
 				BA99992521761ACE007BAA60 /* ViewController.swift in Sources */,
 				BA99992321761ACE007BAA60 /* AppDelegate.swift in Sources */,
 				BA9999802177631A007BAA60 /* Navigator.swift in Sources */,
+				BA7F774D218490DC00776B41 /* Constants.swift in Sources */,
 				BA320AA321784D1E001503F8 /* WorkspaceCellView.swift in Sources */,
 				BA320AA021784BE8001503F8 /* WorkspaceTableViewAdapter.swift in Sources */,
 			);
@@ -274,7 +278,7 @@
 /* Begin PBXTargetDependency section */
 		BA99993321761ACF007BAA60 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BA99991E21761ACE007BAA60 /* DesktopNoDependency */;
+			target = BA99991E21761ACE007BAA60 /* Desktop-Toggl */;
 			targetProxy = BA99993221761ACF007BAA60 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -342,7 +346,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -397,7 +401,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -419,6 +423,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nsproxy.DesktopNoDependency;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -438,6 +443,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nsproxy.DesktopNoDependency;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -461,7 +467,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nsproxy.DesktopNoDependencyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DesktopNoDependency.app/Contents/MacOS/DesktopNoDependency";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Desktop-Toggl.app/Contents/MacOS/Desktop-Toggl";
 			};
 			name = Debug;
 		};
@@ -482,14 +488,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nsproxy.DesktopNoDependencyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DesktopNoDependency.app/Contents/MacOS/DesktopNoDependency";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Desktop-Toggl.app/Contents/MacOS/Desktop-Toggl";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BA99991A21761ACE007BAA60 /* Build configuration list for PBXProject "DesktopNoDependency" */ = {
+		BA99991A21761ACE007BAA60 /* Build configuration list for PBXProject "Desktop-Toggl" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BA99993821761ACF007BAA60 /* Debug */,
@@ -498,7 +504,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BA99993A21761ACF007BAA60 /* Build configuration list for PBXNativeTarget "DesktopNoDependency" */ = {
+		BA99993A21761ACF007BAA60 /* Build configuration list for PBXNativeTarget "Desktop-Toggl" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BA99993B21761ACF007BAA60 /* Debug */,
@@ -507,7 +513,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BA99993D21761ACF007BAA60 /* Build configuration list for PBXNativeTarget "DesktopNoDependencyTests" */ = {
+		BA99993D21761ACF007BAA60 /* Build configuration list for PBXNativeTarget "Desktop-TogglTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BA99993E21761ACF007BAA60 /* Debug */,
