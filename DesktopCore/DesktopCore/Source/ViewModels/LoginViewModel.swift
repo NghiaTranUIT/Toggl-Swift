@@ -8,6 +8,7 @@
 
 import Foundation
 
+// MARK: - LoginViewModelType
 public protocol LoginViewModelType {
 
     func login(email: String, password: String, complete: @escaping (Result<User>) -> Void)
@@ -15,6 +16,7 @@ public protocol LoginViewModelType {
     func loginWithSession(apiToken: String, complete: @escaping (Result<User>) -> Void)
 }
 
+// MARK: - LoginViewModel
 public final class LoginViewModel: LoginViewModelType {
 
     // MARK: - Variable
@@ -26,6 +28,13 @@ public final class LoginViewModel: LoginViewModelType {
     }
 
     // MARK: - Public
+
+    /// Login with email and password
+    ///
+    /// - Parameters:
+    ///   - email: Email of the account
+    ///   - password: password
+    ///   - complete: Complete block, which wraps Result<User> model
     public func login(email: String, password: String, complete: @escaping (Result<User>) -> Void) {
         network.login(email: email, password: password) { (result) in
             DispatchQueue.main.async {
@@ -34,6 +43,11 @@ public final class LoginViewModel: LoginViewModelType {
         }
     }
 
+    /// Login with API token
+    ///
+    /// - Parameters:
+    ///   - apiToken: API Token from Toggl
+    ///   - complete: Complete block, which wraps Result<User> model
     public func login(apiToken: String, complete: @escaping (Result<User>) -> Void) {
         network.login(apiToken: apiToken) { (result) in
             DispatchQueue.main.async {
@@ -42,6 +56,11 @@ public final class LoginViewModel: LoginViewModelType {
         }
     }
 
+    /// Login with session
+    ///
+    /// - Parameters:
+    ///   - apiToken: API Token from Toggl
+    ///   - complete: Complete block, which wraps Result<User> model
     public func loginWithSession(apiToken: String, complete: @escaping (Result<User>) -> Void) {
         network.loginSession(apiToken: apiToken) { (result) in
             DispatchQueue.main.async {

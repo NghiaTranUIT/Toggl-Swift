@@ -8,12 +8,15 @@
 
 import Foundation
 
+/// Plugins for Networking service
 public protocol PluginType {
 
     @discardableResult
     func process(_ urlRequest: URLRequest) -> URLRequest
 }
 
+/// Logger
+/// Log all on-going URLRequest
 public struct LoggerPlugin: PluginType {
 
     @discardableResult

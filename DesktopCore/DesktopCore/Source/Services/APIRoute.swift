@@ -9,6 +9,11 @@
 import Foundation
 
 // MARK: - APIRoute
+/// All Toggl Route could be represent here
+/// It's convenience way to modularize the route
+/// One of benefit is that it hides the Business Login and abstract the Networking Layer in caller-side
+///
+/// It's a minimal version of Moya https://github.com/Moya/Moya
 public enum APIRoute {
 
     case loginEmail(LoginEmailParameter)

@@ -12,9 +12,7 @@ import TogglCore
 struct StubFetcher: Fetchable {
 
     func request(_ urlRequest: URLRequest, block: @escaping (Data?, URLResponse?, Error?) -> Void) {
-        class Test {}
-        let path = Bundle.init(for: Test.self).path(forResource: "User", ofType: "json")!
-        let data = try! Data(contentsOf: URL(fileURLWithPath: path))
+        let data = try! Data(fileName: "User")
         block(data, nil, nil)
     }
 }
@@ -23,5 +21,13 @@ struct FailStubFetcher: Fetchable {
 
     func request(_ urlRequest: URLRequest, block: @escaping (Data?, URLResponse?, Error?) -> Void) {
         block(nil, nil, NetworkingError.invalidURL)
+    }
+}
+
+struct FailStatusCodeFetcher: Fetchable {
+
+    func request(_ urlRequest: URLRequest, block: @escaping (Data?, URLResponse?, Error?) -> Void) {
+        let response = HTTPURLResponse(url: urlRequest.url!, statusCode: 400, httpVersion: "1.0", headerFields: [:])
+        block(nil, response, nil)
     }
 }

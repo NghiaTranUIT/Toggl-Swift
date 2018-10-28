@@ -8,17 +8,14 @@
 
 import Foundation
 
-public protocol ParameterConvertible {
-
-    func toParam() -> [String: Any]
-}
-
+/// LoginEmailParameter tends for containing Email and Password
 public struct LoginEmailParameter {
 
     let email: String
     let password: String
 }
 
+/// LoginTokenParameter tends for containing APIToken
 public struct LoginTokenParameter {
 
     let apiToken: String

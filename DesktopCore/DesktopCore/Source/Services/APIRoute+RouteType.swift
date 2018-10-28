@@ -11,10 +11,14 @@ import Foundation
 // MARK: - RouteType
 extension APIRoute: RouteType {
 
+    /// Base URL of Toggl
+    /// We can change the enviroment in runtime
+    /// Ex: Staging, Production, ...
     var baseURL: String {
-        return "https://www.toggl.com/api/v8"
+        return Environment.default.host
     }
 
+    /// Path for each route
     var path: String {
         switch self {
         case .loginEmail,
@@ -27,6 +31,7 @@ extension APIRoute: RouteType {
         }
     }
 
+    /// HTTP method
     var httpMethod: HTTPMethod {
         switch self {
         case .loginWithSession:
@@ -36,10 +41,13 @@ extension APIRoute: RouteType {
         }
     }
 
+    /// Parameter
+    /// It will serialize to JSON Data
     var parameter: [String: Any]? {
         return nil
     }
 
+    /// Headers of request
     var headers: [Header] {
         var defaultHeaders = [Header(key: "Content-Type", value: "application/json")]
         switch self {
