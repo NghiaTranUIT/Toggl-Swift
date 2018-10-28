@@ -7,7 +7,6 @@
 //
 
 import XCTest
-@testable import DesktopNoDependency
 
 class DesktopNoDependencyTests: XCTestCase {
 

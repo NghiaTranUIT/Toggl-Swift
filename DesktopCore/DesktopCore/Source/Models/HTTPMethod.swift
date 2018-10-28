@@ -8,12 +8,14 @@
 
 import Foundation
 
+/// HTTPMethod convenience
 enum HTTPMethod: String {
 
     case get
     case post
     case head
 
+    /// Convert method to Uppercase string
     var method: String {
         return self.rawValue.uppercased()
     }

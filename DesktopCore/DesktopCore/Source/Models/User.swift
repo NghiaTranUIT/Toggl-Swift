@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Represent for User model
 public struct User: JSONDecodable {
 
     struct Constants {
@@ -15,10 +16,12 @@ public struct User: JSONDecodable {
         static let Fullname = "fullname"
     }
 
+    // MARK: - Variable
     public let email: String
     public let fullName: String
     public let workspaces: [Workspace]
 
+    // MARK: - JSONDecodable
     public static func decode(_ json: [String : Any]) -> User? {
         guard let email = json[Constants.Email] as? String,
             let fullname = json[Constants.Fullname] as? String else { return nil }
@@ -28,6 +31,7 @@ public struct User: JSONDecodable {
     }
 }
 
+// MARK: - Equatable
 extension User: Equatable {
 
     public static func == (lhs: User, rhs: User) -> Bool {

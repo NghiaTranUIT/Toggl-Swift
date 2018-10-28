@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Represent for Header in URLRequest
 public struct Header {
 
     // MARK: - Variable

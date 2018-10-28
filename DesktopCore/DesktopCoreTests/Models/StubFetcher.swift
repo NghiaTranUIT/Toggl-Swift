@@ -12,9 +12,7 @@ import TogglCore
 struct StubFetcher: Fetchable {
 
     func request(_ urlRequest: URLRequest, block: @escaping (Data?, URLResponse?, Error?) -> Void) {
-        class Test {}
-        let path = Bundle.init(for: Test.self).path(forResource: "User", ofType: "json")!
-        let data = try! Data(contentsOf: URL(fileURLWithPath: path))
+        let data = try! Data(fileName: "User")
         block(data, nil, nil)
     }
 }

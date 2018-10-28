@@ -8,11 +8,14 @@
 
 import Foundation
 
+/// Represent for workspace
 public struct Workspace: JSONDecodable {
 
+    // MARK: - Variable
     public let id: Int
     public let name: String
 
+    // MARK: - JSONDecodable
     public static func decode(_ json: [String : Any]) -> Workspace? {
         guard let id = json["id"] as? Int,
             let name = json["name"] as? String else { return nil }

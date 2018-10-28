@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Responsible for decode json to model
 public protocol JSONDecodable {
 
     static func decode(_ json: [String: Any]) -> Self?
