@@ -26,7 +26,7 @@ This project is actively under development. We don't consider it ready for produ
 - [ ] RxSwift Extension
 
 ## Structure
-`Toggl Swift` is designed in the flexibility manner. We are free to provide your desired URLSession, Serializer, Plugins
+`Toggl Swift` is designed in the flexibility manner. It's so easy in order to provide your own URLSession, Serializer, Plugins.
 
 We've inspired the idea from Moya, which means that we abstract the nasty Networking layer by introducing the `APIRoute` enum.
 
