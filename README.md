@@ -12,9 +12,6 @@ Toggl Swift is a wrapper of [Toggl-api-v8](https://github.com/toggl/toggl_api_do
 
 It's obvious that we don't want to introduce any unnecessary dependency, such as Alamofire, Moya to your project 👨‍💻
 
-## Structure
-`Toggl Swift` is designed in the flexibility maner.  We are freedom to provide your desize URLSession, Serializer, Plugins
-
 ## Project Status and Roadmap
 
 This project is actively under development. We don't consider it ready for production use.
@@ -27,6 +24,44 @@ This project is actively under development. We don't consider it ready for produ
 - [ ] Client, Group, Tag, Task, ... APIs
 - [ ] Report APIs
 - [ ] RxSwift Extension
+
+## Structure
+`Toggl Swift` is designed in the flexibility manner. We are free to provide your desired URLSession, Serializer, Plugins
+
+We've inspired the idea from Moya, which means that we abstract the nasty Networking layer by introducing the `APIRoute` enum.
+
+By using this approach, there are positive benefits.
+1. Hide the complexity of URLSession or Alamofire behind the scene from the client.
+2. Use API Route enum as a first-citizen by defining clearly the routes.
+3. Hide the business logic and strengthen readability and testable.
+
+### API Routes
+```swift
+public enum APIRoute {
+
+    case loginEmail(LoginEmailParameter)
+    case loginAPIToken(LoginTokenParameter)
+    case loginWithSession(LoginTokenParameter)
+    case project
+    case ...
+}
+```
+
+### Network Service
+`NetworkService` is capable of injecting your custom classes. Rather than one god class has really big responsibilities, it dedicatedly delegates to other guys, who are really good at it. For instance, `Fetchable`, `Serializable`, `PluginType`, `ValidatorType`, ...
+
+Therefore, it's super flexible to you to integrate to your own app.
+
+```swift
+public final class NetworkService: NetworkServiceType {
+
+    // MARK: - Variable
+    private let fetcher: Fetchable
+    private let serializer: Serializable
+    private let plugins: [PluginType]
+    private let statusCodeValidator: ValidatorType // future
+}
+```
 
 ## Sample Projects
 We have provided 1 sample macOS projects in the repository.
