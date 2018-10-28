@@ -159,3 +159,6 @@ network.login(email: "john.doe@gmail.com", password: "Toggl") { (result) in
     }
 }
 ```
+
+## License
+`Toggl Swift` is released under an MIT license. See LICENSE for more information.
