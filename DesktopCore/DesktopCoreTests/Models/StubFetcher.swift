@@ -23,3 +23,11 @@ struct FailStubFetcher: Fetchable {
         block(nil, nil, NetworkingError.invalidURL)
     }
 }
+
+struct FailStatusCodeFetcher: Fetchable {
+
+    func request(_ urlRequest: URLRequest, block: @escaping (Data?, URLResponse?, Error?) -> Void) {
+        let response = HTTPURLResponse(url: urlRequest.url!, statusCode: 400, httpVersion: "1.0", headerFields: [:])
+        block(nil, response, nil)
+    }
+}

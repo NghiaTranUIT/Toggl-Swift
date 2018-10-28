@@ -103,4 +103,47 @@ class NetworkServiceTests: XCTestCase {
             }
         }
     }
+
+    func testNetworkServiceFailDueTo400StatusCode() {
+
+        // Given
+        network = NetworkService(fetcher: FailStatusCodeFetcher(), serializer: JSONSerializer())
+        let email = "john.doe@gmail.com"
+        let password = "123"
+
+        // When
+        let route = APIRoute.loginEmail(LoginEmailParameter(email: email, password: password))
+        network.request(route, type: User.self) { (result) in
+
+            // Then
+            switch result {
+            case .success:
+                XCTFail()
+            case .error(let error):
+                guard let networkingError = error as? NetworkingError else {
+                    XCTFail()
+                    return
+                }
+                switch networkingError {
+                case .serverError(let nsError as NSError):
+                    XCTAssertEqual(nsError.code, 400)
+                default:
+                    XCTFail()
+                }
+            }
+        }
+    }
+
+    func testNetworkServiceCallPlugins() {
+        // Given
+        let spyPlugin = SpyLoggerPlugin()
+        network = NetworkService(fetcher: StubFetcher(), serializer: JSONSerializer(), plugins: [spyPlugin])
+
+        // When
+        let route = APIRoute.loginWithSession(LoginTokenParameter(apiToken: "api"))
+        network.request(route, type: User.self) { _ in }
+
+        // Then
+        XCTAssertTrue(spyPlugin.isCall)
+    }
 }

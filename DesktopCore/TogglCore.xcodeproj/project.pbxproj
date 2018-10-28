@@ -34,8 +34,8 @@
 		BA9999862177652E007BAA60 /* User.json in Resources */ = {isa = PBXBuildFile; fileRef = BA9999852177652E007BAA60 /* User.json */; };
 		BA999988217765C4007BAA60 /* NetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA999987217765C4007BAA60 /* NetworkServiceTests.swift */; };
 		BAFF94FE2185F84A00767772 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFF94FD2185F84A00767772 /* Result.swift */; };
-		BAFF95012185F9BD00767772 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFF95002185F9BD00767772 /* Constants.swift */; };
 		BAFF95032185F9E300767772 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFF95022185F9E300767772 /* Environment.swift */; };
+		BAFF95062185FBF000767772 /* SpyLoggerPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFF95042185FBCE00767772 /* SpyLoggerPlugin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,8 +79,8 @@
 		BA9999852177652E007BAA60 /* User.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = User.json; sourceTree = "<group>"; };
 		BA999987217765C4007BAA60 /* NetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
 		BAFF94FD2185F84A00767772 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
-		BAFF95002185F9BD00767772 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BAFF95022185F9E300767772 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		BAFF95042185FBCE00767772 /* SpyLoggerPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyLoggerPlugin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,7 +171,7 @@
 		BA99996821775574007BAA60 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				BAFF94FF2185F9B300767772 /* Constants */,
+				BAFF94FF2185F9B300767772 /* Environment */,
 				BA7F77532184923900776B41 /* Protocols */,
 				BA99997B217761AA007BAA60 /* ViewModels */,
 				BA99996C217755CB007BAA60 /* Services */,
@@ -223,17 +223,17 @@
 			isa = PBXGroup;
 			children = (
 				BA99998321776515007BAA60 /* StubFetcher.swift */,
+				BAFF95042185FBCE00767772 /* SpyLoggerPlugin.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		BAFF94FF2185F9B300767772 /* Constants */ = {
+		BAFF94FF2185F9B300767772 /* Environment */ = {
 			isa = PBXGroup;
 			children = (
-				BAFF95002185F9BD00767772 /* Constants.swift */,
 				BAFF95022185F9E300767772 /* Environment.swift */,
 			);
-			path = Constants;
+			path = Environment;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -358,7 +358,6 @@
 				BA999970217755DC007BAA60 /* NetworkService.swift in Sources */,
 				BA7F775D218492B300776B41 /* APIRoute+RouteType.swift in Sources */,
 				BA7F77552184924700776B41 /* RouteType.swift in Sources */,
-				BAFF95012185F9BD00767772 /* Constants.swift in Sources */,
 				BA99996B21775585007BAA60 /* User.swift in Sources */,
 				BA999974217759CF007BAA60 /* Fetcher.swift in Sources */,
 				BA320A9E21784940001503F8 /* Workspace.swift in Sources */,
@@ -377,6 +376,7 @@
 			files = (
 				BA7F776C2185F3B500776B41 /* Data+Exts.swift in Sources */,
 				BA999988217765C4007BAA60 /* NetworkServiceTests.swift in Sources */,
+				BAFF95062185FBF000767772 /* SpyLoggerPlugin.swift in Sources */,
 				BA99998421776515007BAA60 /* StubFetcher.swift in Sources */,
 				BA7F77682185F0C600776B41 /* JSONSerializerTests.swift in Sources */,
 			);
